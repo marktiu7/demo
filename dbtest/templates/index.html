@@ -8,5 +8,18 @@
     </head>
     <body>
     {{ mot }}
+
+    <table>
+        {% for line in user_list %}
+        <tr>
+            <td>
+                {{line.name}}
+            </td>
+            <td>
+                {{line.email}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
     </body>
 </html>
