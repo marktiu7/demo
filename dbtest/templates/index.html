@@ -5,21 +5,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
+   
+       
     </head>
     <body>
-    {{ mot }}
-
-    <table>
-        {% for line in user_list %}
-        <tr>
-            <td>
-                {{line.name}}
-            </td>
-            <td>
-                {{line.email}}
-            </td>
+   
+    <table border="1">
+         {% for line in user_list %}
+        <tr>  
+            <td>{{line.name}}</td>      
+            <td>{{line.email}}</td>           
+            <td>{{line.memo}}</td>
         </tr>
-        {% endfor %}
-    </table>
+           {% endfor %}
+
+
+           {%for i in mo%}
+           <tr>
+               <td>{{i.id}}</td>
+               <td>{{i.memo}}</td>
+           </tr>
+         {%endfor%}
+
+ </table>
+
+<p>
+    {{aget.email}}
+</p>
+<p>
+    {{aget.memo}}
+</p>
+
+    {% for n in userdata %}
+    <p>{{n.name}}</p>
+    {% endfor %}
     </body>
 </html>
