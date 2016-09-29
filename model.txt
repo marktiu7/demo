@@ -1,0 +1,9 @@
+
+
+You need a LessonCount object, but LessonCount.objects.all() is a QuerySet.
+
+Change that line to:
+
+lessoncount = LessonCount.objects.get(user=request.user)
+
+
