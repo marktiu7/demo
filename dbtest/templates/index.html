@@ -10,7 +10,8 @@
     </head>
     <body>
    
-<form  method="POST" >
+<form action="/blog/show/" method="POST" >
+ {% csrf_token %} 
     <input type="text" name="a_user" value="hello">
     <input type="password" name="a_pwd" value="">
     <input type="submit"  value="submit">
