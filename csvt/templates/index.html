@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+     <style>
+
+     table input{
+         float: right;
+     }
+     .errorlist{
+         background: red;
+     }
+     </style>
+   
+    </head>
+    <body>
+    <form method="post">
+      <table>
+      {%for i in uf%}
+          <tr>
+              <td>{{i.label_tag}} {{i}}</td>
+                <td> {{i.errors}}</td>
+          </tr>
+          {%endfor%}
+      </table> 
+       
+
+        <input type="submit" name="" value="ok">
+    </form>
+    </body>
+</html>
